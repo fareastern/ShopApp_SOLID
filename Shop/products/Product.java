@@ -25,7 +25,7 @@ public class Product {
     }
 
     // Принцип открытости/закрытости
-    // Класс открыт для расширения (можно наследовать и изменять логику расчета рейтинга), но закрыт для модификации
+    // Открыт для расширения (можно наследовать и изменять логику расчета рейтинга), но закрыт для модификации
     public void updateRating(Double newRating) {
         if (newRating < MIN_RATING || newRating > MAX_RATING) {
             throw new IllegalArgumentException("Рейтинг должен быть от " + MIN_RATING + " до " + MAX_RATING);
